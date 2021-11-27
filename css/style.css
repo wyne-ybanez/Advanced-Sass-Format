@@ -6,7 +6,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: #777;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -40,8 +40,9 @@ body {
   text-align: center; }
 
 .heading-primary {
-  color: #55c57a;
+  color: #fff;
   text-transform: uppercase;
+  font-family: "Lato", sans-serif;
   backface-visibility: hidden;
   margin-bottom: 60px; }
 
@@ -63,6 +64,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  font-family: "Lato", sans-serif;
   animation: moveInRight 1s ease-out; }
 
 /* Key Frames */
@@ -116,7 +118,8 @@ body {
 
 .btn--white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+  font-family: "Lato", sans-serif; }
 
 .btn::after {
   content: '';
