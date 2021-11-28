@@ -3,15 +3,15 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 body {
-  font-family: #777;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px; }
+  padding: 30px;
+  box-sizing: border-box; }
 
 .header {
   height: 95vh;
@@ -19,25 +19,21 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  /* clip - clockwise */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-.header__logo {
-  height: 35px; }
-
-.header__text-box {
-  /* In relation to the parent element */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* In relation to the element itself */
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    /* In relation to the parent element */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* In relation to the element itself */
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -45,27 +41,25 @@ body {
   font-family: "Lato", sans-serif;
   backface-visibility: hidden;
   margin-bottom: 60px; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  /* 
-  animation-delay: 3s; 
-  animation-iteration-count: 3; 
-  */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  font-family: "Lato", sans-serif;
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /* 
+    animation-delay: 3s; 
+    animation-iteration-count: 3; 
+    */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    font-family: "Lato", sans-serif;
+    animation: moveInRight 1s ease-out; }
 
 /* Key Frames */
 @keyframes moveInLeft {
@@ -98,8 +92,7 @@ body {
 
 /* End of KeyFrames */
 /* Button Animations */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -111,6 +104,9 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -120,6 +116,8 @@ body {
   background-color: #fff;
   color: #777;
   font-family: "Lato", sans-serif; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: '';
@@ -132,13 +130,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
