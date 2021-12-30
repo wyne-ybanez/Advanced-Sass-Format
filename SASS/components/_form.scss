@@ -41,6 +41,7 @@
   }
 
   &__input:placeholder-shown + &__label {
+    // This ensures that the placeholders are hidden
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
