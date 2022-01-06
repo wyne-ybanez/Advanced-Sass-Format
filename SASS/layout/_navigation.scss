@@ -119,7 +119,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: ''; // We already specified the height and the width
       position: absolute;
       left: 0;
       transition: all 0.2s;
@@ -128,16 +128,32 @@
     &::before {
       top: -0.8rem;
     }
+
     &::after {
       top: 0.8rem;
     }
+  }
 
-    &__button:hover &__icon::before {
-      top: -1rem;
-    }
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
 
-    &__button:hover &__icon::after {
-      top: 1rem;
-    }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  // NAV HAMBURGER ICON turns to X
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
