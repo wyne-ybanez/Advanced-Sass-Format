@@ -1,3 +1,23 @@
+/*
+// MEDIA QUERIES
+
+0 - 600px:  Phone
+600-900px:  Tablet Portrait
+900-1200px:  Tablet Landscape
+1800px + :  Big Desktop
+
+[1200-1800px] is where our normal desktop styling apply
+
+// BREAKPOINT
+
+Breakpoint argument choices: 
+- Phone 
+- tab-port 
+- tab-land 
+- big-desktop
+
+1em = 16px => Just divide your desired width by 16px 
+*/
 *,
 *::before,
 *::after {
@@ -7,6 +27,18 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 body {
   box-sizing: border-box; }
