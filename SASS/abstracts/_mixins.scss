@@ -14,6 +14,7 @@
 }
 
 /*
+
 // MEDIA QUERIES
 
 0 - 600px:  Phone
@@ -32,6 +33,9 @@ Breakpoint argument choices:
 - big-desktop
 
 1em = 16px => Just divide your desired width by 16px 
+
+ORDER: Base + typography > general layout + grid > page Layout > components
+
 */
 
 @mixin respond-phone {
@@ -69,3 +73,11 @@ Breakpoint argument choices:
     }
   }
 }
+
+/*
+
+@media (min-width: 800px) { … } - for browser’s viewport width equal or wider than 800px;
+
+@media (max-width: 800px) { … } - for browser’s viewport width equal or narrower than 800px;
+
+*/
