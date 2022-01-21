@@ -28,11 +28,17 @@
     overflow: hidden;
     border-radius: 50%;
 
-    -webkit-shape-outside: circle(50% at 50% 50%); // circle( radius @ cx cy )
-    shape-outside: circle(
-      50% at 50% 50%
-    ); // shape-outside: This defines how the content floats around the element
-    clip-path: circle(50% at 50% 50%); // To define the actual circle itself
+    // For Firefox and Safari
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%); // To define the actual circle itself
+
+      -webkit-shape-outside: circle(50% at 50% 50%); // circle( radius @ cx cy )
+      // shape-outside: This defines how the content floats around the element
+      shape-outside: circle(50% at 50% 50%);
+
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
