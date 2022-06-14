@@ -187,7 +187,7 @@ $ git clone https://github.com/wyne-ybanez/personal-portfolio-master
 - ...
 
 ## Acknowledgements
-
+- Jonas Schmedtmann for his advanced CSS course: https://www.udemy.com/course/advanced-css-and-sass/
 - ...
 
 
